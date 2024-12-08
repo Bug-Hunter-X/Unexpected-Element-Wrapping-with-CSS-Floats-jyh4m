@@ -1,0 +1,26 @@
+The solution involves adding a clearing mechanism after the floated elements.  There are several ways to do this, here is one using the `clear: both` property:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+```
+
+Apply the `clearfix` class to a parent container of the floated elements to clear the floats:
+
+```html
+<div class="clearfix">
+  <div>Element 1</div>
+  <div>Element 2</div>
+</div>
+<div>Next Element</div>
+```
+
+This ensures that the 'Next Element' won't wrap unexpectedly.
