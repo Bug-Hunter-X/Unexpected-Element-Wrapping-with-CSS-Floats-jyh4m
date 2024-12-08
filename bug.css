@@ -1,0 +1,10 @@
+The following CSS code snippet causes an unexpected rendering issue in certain browsers:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+The issue stems from the use of `float: left` without a proper clearing mechanism.  If the `div` elements don't perfectly fill a row, subsequent elements might unexpectedly wrap around or overlap.
